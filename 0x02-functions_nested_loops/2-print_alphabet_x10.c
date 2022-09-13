@@ -4,14 +4,14 @@
  * *
  * * Return: x10 a-z
  * *
- * /
+ *  /
  *  void print_alphabet_x10(void)
  *  {
  *  int n, ma;
  *
- *  ma = 0;
+ *  ma=0;
  *
- *  while (ma < 10)
+ *  while(ma < 10)
  *  {
  *  for (n = 'a'; n <= 'z'; n++)
  *  {

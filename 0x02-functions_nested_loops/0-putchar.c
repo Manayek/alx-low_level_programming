@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * * main - Entry Point.use only user defined variable to create output.
+ * * main - check the code
  * *
- * * Description: Print _putchar using predefined functions
- * *
- * * Return: 0
+ * * Return: Always 0.
  * *
  */
 int main(void)

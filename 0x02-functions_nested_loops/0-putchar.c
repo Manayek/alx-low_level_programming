@@ -1,13 +1,12 @@
-#include <stdio.h>
-
+#include "_putchar"
 /**
  * * main - Entry Point.use only user defined variable to create output.
  * *
  * * Description: Print _putchar using predefined functions
  * *
  * * Return: 0
- * */
-
+ * *
+ */
 int main(void)
 {
 	_putchar('_');

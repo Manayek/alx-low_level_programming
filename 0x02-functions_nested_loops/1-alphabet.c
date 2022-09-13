@@ -4,16 +4,14 @@
  * *
  * * Return: Always 0 (Success)
  * *
- */
-
+ */	
 void print_alphabet(void)
 {
-	char alpha;
+	int n;
 
-	for (alpha = 'a'; alpha <= 'z'; alpha++)
-
+	for (n = 'a'; n <= 'z'; n++)
 	{
-		_putchar(alpha);
+		_putchar(n);
 	}
 	_putchar('\n');
 }

@@ -1,11 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * * print_alphabet_x10 - repeats the print_alphabet 10 times.
  * *
  * * Return: Always 0.
  * *
  */
+int main(void)
+{
+	print_alphabet_x10();
+	return (0);
+}
 void print_alphabet_x10(void)
 {
 	int i;
@@ -20,4 +24,3 @@ void print_alphabet_x10(void)
 		putchar('\n');
 	}
 }
-

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "_putchar"
 /**
  * * main - Entry Point.use only user defined variable to create output.
  * *

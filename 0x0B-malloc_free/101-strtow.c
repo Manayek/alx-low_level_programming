@@ -61,6 +61,7 @@ char **strtow(char *str)
 	for (; *str != '\0' &&  b < total_words;)
 	{
 		if (*str == ' ')
+
 				str++;
 		else
 		{
@@ -84,9 +85,9 @@ char **strtow(char *str)
 			}
 			words[b][c] = '\0';
 			b++;
-		       	c = 0;
-		       	length = 0;
-		       	str++;
+			c = 0;
+			length = 0;
+			str++;
 		}
 	}
 	return (words);

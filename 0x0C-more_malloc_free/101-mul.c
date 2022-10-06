@@ -1,7 +1,5 @@
-#ifndef main_h
+#include "main.h"
 #include <limits.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * * str_len - finds string length

@@ -2,35 +2,43 @@ nclude "dog.h"
 #include <stdlib.h>
 
 /**
- * * new_dog - entry point
- * * @name: string from main, name of pet
- * * @age: number from main, age of pet
- * * @owner: string from main, owner of pet
- * * Return: p
+ * * new_dog - This fuction creates a new dog.
+ * * @name: dog's name.
+ * * @age: dog's age.
+ * * @owner: dog's owner.
+ * * Return: pointer to the new dog.
  * *
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *p;
-	/* reserving memory to struct*/
-	p = malloc(sizeof(dog_t));
-	if (p == NULL)
+	dog_t *zira;
+	char *n, *o;
+	int a = 0, b = 0;
+
+	zira = malloc(sizeof(dog_t));
+	if (zira == NULL)
 		return (NULL);
-	/* Cpunting name pointer*/
-	if (name == NULL)
+	for (; *(name + a); a++);
+	for (; *(owner + b); b++);
+
+	n = (char *)malloc(sizeof(char) * (a + 1));
+	o = (char *)malloc(sizeof(char) * (b + 1));
+
+	if (!(n && o))
 	{
-		free(p);
-		free(owner);
+		if (!o && n)
+			free(n);
+		free(zira);
 		return (NULL);
 	}
-	if (owner == NULL)
-	{
-		free(p);
-		free(name);
-		return (NULL);
-	}
-	p->name = name;
-	p->age = age;
-	p->owner = owner;
-	return (p);
+	for (; a >= 0; a--)
+
+		*(n + a) = *(name + a);
+	for (; b >= 0; b--)
+
+		*(o + b) = *(owner + b);
+	zira->name = n;
+	zira->age = age;
+	zira->owner = o;
+	return (zira);
 }

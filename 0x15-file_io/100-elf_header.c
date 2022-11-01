@@ -122,7 +122,8 @@ void print_data(unsigned char *e_ident)
  */
 void print_version(unsigned char *e_ident)
 {
-	printf("  Version:%d",e_ident[EI_VERSION]);
+	printf("  Version:                           %d",
+			e_ident[EI_VERSION]);
 
 	switch (e_ident[EI_VERSION])
 	{
@@ -188,7 +189,8 @@ void print_osabi(unsigned char *e_ident)
  */
 void print_abi(unsigned char *e_ident)
 {
-	printf("  ABI Version:%d\n", e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+			e_ident[EI_ABIVERSION]);
 }
 
 /**
@@ -206,23 +208,23 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 
 	switch (e_type)
 	{
-		cas ET_NONE:
+		case ET_NONE:
 			printf("NONE (None)\n");
-		break;
+			break;
 		case ET_REL:
-		printf("REL (Relocatable file)\n");
-		break;
+			printf("REL (Relocatable file)\n");
+			break;
 		case ET_EXEC:
-		printf("EXEC (Executable file)\n");
-		break;
+			printf("EXEC (Executable file)\n");
+			break;
 		case ET_DYN:
-		printf("DYN (Shared object file)\n");
-		break;
+			printf("DYN (Shared object file)\n");
+			break;
 		case ET_CORE:
-		printf("CORE (Core file)\n");
-		break;
+			printf("CORE (Core file)\n");
+			break;
 		default:
-		printf("<unknown: %x>\n", e_type);
+			printf("<unknown: %x>\n", e_type);
 	}
 }
 
@@ -262,7 +264,7 @@ void close_elf(int elf)
 	if (close(elf) == -1)
 	{
 		dprintf(STDERR_FILENO,
-					"Error: Can't close fd %d\n", elf);
+				"Error: Can't close fd %d\n", elf);
 		exit(98);
 	}
 }
